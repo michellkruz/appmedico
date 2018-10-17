@@ -3,7 +3,7 @@
  */
 import KNN from './knn.js';
 
-
+import euclidean from './euclidean.js';
 var dataset = [[0, 0, 0], [0, 1, 1], [1, 1, 0], [2, 2, 2], [1, 2, 2], [2, 1, 2]];
 var predictions = [0, 0, 0, 1, 1, 1];
 
@@ -28,14 +28,31 @@ var predict = [
 ];
 
 
+
+
 //var knn = new KNN(dataset, predictions);
 var knn = new KNN(cincodoencas, classes, {k: 1});
 //var dataset = [[0, 0, 0], [2, 2, 2]];
 
 //var ans = knn.predict(dataset);
-var ans = knn.predict(predict);
+var ans = knn.predict(predict);  // resutado correto [ 0,1,2,3,4]
 
 console.log(ans);
+
+
+console.log("Teste com a distancia Euclidiana");
+for(var i = 0; i<5;i++){
+	
+	for(var j = 0; j<5;j++){
+		var e  = euclidean(cincodoencas[i], predict[j]);
+
+		console.log("doença: " + i + " pred: " +j + " distancia: "+e);
+	}
+	
+	console.log("");
+}
+
+
 
 //document.getElementById(ans).style.display = "block";
 

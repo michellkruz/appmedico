@@ -112,15 +112,26 @@ function getSinglePrediction(knn, currentCase) {
     for (var element of knn.classes) {
         pointsPerClass[element] = 0;
     }
-
+    
+    
+    
     for (var i = 0; i < nearestPoints.length; ++i) {
         var currentClass = nearestPoints[i][0][lastElement];
         var currentPoints = ++pointsPerClass[currentClass];
+//        console.log("atual: "+currentClass+ " = " + currentPoints);
+        
+        
         if (currentPoints > maxPoints) {
             predictedClass = currentClass;
             maxPoints = currentPoints;
+//            console.log("if")
         }
     }
+    
+
+//    for (var element of knn.classes) {
+//    	console.log("pointsPerClass: " + pointsPerClass[element] + " element: "+element)
+//    }
 
     return predictedClass;
 }
