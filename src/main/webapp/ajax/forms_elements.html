@@ -326,6 +326,91 @@
 						</div>
 					</div>
 				</div>
+				<h4 class="page-header">Achados Secundários</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple class="form-control" id="SelectAch">
+							<option>Abaulamento Do Septo Interventricular Para Esquerda</option>
+							<option>Aero Broncograma</option>
+							<option>Aprisionamento De Ar A Expiração Forçada</option>
+							<option>Arvore Em Brotamento</option>
+							<option>Aspergiloma</option>
+							<option>Atelectasias</option>
+							<option>Ausente</option>
+							<option>Bandas Parenquimatosas</option>
+							<option>Broncograma Aéreo</option>
+							<option>Bronquiectasia Cística</option>
+							<option>Bronquiectasias</option>
+							<option>Bronquiectasias De Tração</option>
+							<option>Bronquiolectasias De Tração</option>
+							<option>Calcificações Vasculares</option>
+							<option>Cistos Subpleurais</option>
+							<option>Complexo De Ranke</option>
+							<option>Curvilínea Subpleural</option>
+							<option>Derrame Pericárdico</option>
+							<option>Derrame Pleural</option>
+							<option>Dilatação Da Artéria Pulmonar</option>
+							<option>Dilatação Das Câmaras Cardíacas</option>
+							<option>Distorção Broncovascular</option>
+							<option>Distorção Da Arquitetura Pulmonar</option>
+							<option>Espessamento Brônquico</option>
+							<option>Espessamento Da Parede Bronquiolar</option>
+							<option>Espessamento Da Parede Cavitária</option>
+							<option>Espessamento Da Traquéia</option>
+							<option>Espessamento Do Interstício Peribroncovascular</option>
+							<option>Espessamento Dos Septos Interlobulares</option>
+							<option>Espessamento Nodular Da Traquéia</option>
+							<option>Espessamento Pleural</option>
+							<option>Estreitamento Luminal Da Traquéia</option>
+							<option>Hipertrofia Da Artéria Brônquicar</option>
+							<option>Hipertrofia Do Ventrículo Direito</option>
+							<option>Impactação Mucóide</option>
+							<option>Insuficiência Cardíaca Direita</option>
+							<option>Linfonodo Hilar Calcificado</option>
+							<option>Linfonodomegalia Hilar</option>
+							<option>Linfonodomegalia Mediastinal</option>
+							<option>Linfonodomegalias</option>
+							<option>Linfonodos Calcificados</option>
+							<option>Massa Conglomerada</option>
+							<option>Massa Espongiformer</option>
+							<option>Micronódulos Miliares</option>
+							<option>Multiplos Vasos Perialveolares</option>
+							<option>Nódulo De Gohn</option>
+							<option>Pavimentação Em Mosaico</option>
+							<option>Placas Pleurais</option>
+							<option>Pneumotórax</option>
+							<option>Redução Do Calibre Das Vias Aéreas</option>
+							<option>Sinal Do Angiograma</option>
+							<option>Sinal Do Crescente Aéreo</option>
+							<option>Sinal Do Halo</option>
+							<option>Sinal Do Halo Em Vidro Fosco</option>
+							<option>Sinal Do Halo Invertido</option>
+							<option>Trombos Muras Das Artérias  Proximais</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Sexo</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectSex">
+							<option>Feminino</option>
+							<option>Masculino</option>
+							<option>Sem Predileção</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Idade</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectIda">
+							<option>Bebê</option>
+							<option>Criança</option>
+							<option>Adolescente</option>
+							<option>Adulto</option>
+							<option>Idoso</option>
+						</select>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -369,6 +454,9 @@ function Select2Test(){
 	$("#SelectCalci").select2();
 	$("#SelectArvBrot").select2();
 	$("#SelectCavit").select2();
+	
+	$("#SelectSex").select2();
+	$("#SelectIda").select2();
 }
 $(document).ready(function() {
 	// Load script of Select2 and run this
