@@ -1,0 +1,370 @@
+<div class="row">
+	<div id="breadcrumb" class="col-md-12">
+		<ol class="breadcrumb">
+			<li><a href="#">Referências</a></li>
+		</ol>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-sm-6">
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-bar-chart-o"></i>
+					<span>Informações Básicas</span>
+				</div>
+				<div class="box-icons">
+					<a class="collapse-link">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+					<a class="expand-link">
+						<i class="fa fa-expand"></i>
+					</a>
+					<a class="close-link">
+						<i class="fa fa-times"></i>
+					</a>
+				</div>
+				<div class="no-move"></div>
+			</div>
+			<div class="box-content">
+				<h4 class="page-header">Tipo de Nódulo</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectNod">
+							<option>Centrolobular</option>
+							<option>Massa/Nódulo</option>
+							<option>Periférico</option>
+							<option>Randômico</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Contorno</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectCont">
+							<option>Bem Definido</option>
+							<option>Mal Definido</option>
+							<option>Misto</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Quantidade</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectQtd">
+							<option>Múltiplos</option>
+							<option>Solitário</option>
+							<option>Solitário/Múltiplos</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Atenuação</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectAte">
+							<option>Partes Moles</option>
+							<option>Vidro Fosco</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Tamanho</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectTam">
+							<option>Menor que 3mm</option>
+							<option>Menor que 1cm</option>
+							<option>1-3cm</option>
+							<option>Maior que 3cm</option>
+							<option>Variável</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Simetria</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectSim">
+							<option>Assimetria</option>
+							<option>Assimétrico</option>
+							<option>Misto</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-bar-chart-o"></i>
+					<span>Características I</span>
+				</div>
+				<div class="box-icons">
+					<a class="collapse-link">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+					<a class="expand-link">
+						<i class="fa fa-expand"></i>
+					</a>
+					<a class="close-link">
+						<i class="fa fa-times"></i>
+					</a>
+				</div>
+				<div class="no-move"></div>
+			</div>
+			<div class="box-content">
+				<h4 class="page-header">Calcificação</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectCalci">
+							<option>Ausente</option>
+							<option>Presente</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Árvore em Brotamento</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectArvBrot">
+							<option>Ausente</option>
+							<option>Presente</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Cavitação</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select id="SelectCavit">
+							<option>Ausente</option>
+							<option>Presente</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-bar-chart-o"></i>
+					<span>Características II</span>
+				</div>
+				<div class="box-icons">
+					<a class="collapse-link">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+					<a class="expand-link">
+						<i class="fa fa-expand"></i>
+					</a>
+					<a class="close-link">
+						<i class="fa fa-times"></i>
+					</a>
+				</div>
+				<div class="no-move"></div>
+			</div>
+			<div class="box-content">
+				<h4 class="page-header">Por Segmento (Localização)</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple class="form-control" id="SelectSegLocal">
+							<option>Segmento Posterior</option>
+							<option>Segmento Apical</option>
+							<option>Segmento Apicoposterior</option>
+							<option>Segmento Superior</option>
+							<option>Segmentos Pulmonares</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Por Lobo (Localização)</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple class="form-control" id="SelectSegLobo">
+							<option>Lobar</option>
+							<option>Lobo Inferior</option>
+							<option>Lobo Lingular</option>
+							<option>Lobo Médio</option>
+							<option>Lobo Superior</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Por Região (Localização)</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple class="form-control" id="SelectQtd">
+							<option>Difuso</option>
+							<option>Peribroncovascular</option>
+							<option>Peri-hilar</option>
+							<option>Pleurak</option>
+							<option>Variável</option>
+							<option>Randômica</option>
+							<option>Septal</option>
+							<option>Subpleural</option>
+							<option>Traquéia</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Associação</h4>
+				<div class="row form-group">
+					<div class="col-sm-6">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" checked> Ausente
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Cistos Verdadeiros (Padrão Cístico)
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Consolidação
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" checked> Enfisema
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Enfisema Panlobular
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Faveolamento
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" checked> Nódulos nas Fissuras Interlobares 
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Nódulos Peribroncovasculares
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Nódeulos Periféricos (Subpleurais)
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" checked> Padrão Granular
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Padrão Nodular Centrolobular
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Padrão Nodular Randômico
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" checked> Padrão Reticular
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Padrão Septal
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Padrão Septal Liso
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" checked> Padrão Septal Nodular
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Perfusão em Mosaico
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Vidro Fosco
+								<i class="fa fa-square-o small"></i>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-6">
+		<div class="box">
+			<div class="box-header">
+				<div class="box-name">
+					<i class="fa fa-circle"></i>
+					<span>Saída</span>
+				</div>
+				<div class="box-icons">
+					<a class="collapse-link">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+					<a class="expand-link">
+						<i class="fa fa-expand"></i>
+					</a>
+					<a class="close-link">
+						<i class="fa fa-times"></i>
+					</a>
+				</div>
+				<div class="no-move"></div>
+			</div>
+			<div class="box-content">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+// Run Select2 on element
+function Select2Test(){
+	$("#SelectNod").select2();
+	$("#SelectCont").select2();
+	$("#SelectQtd").select2();
+	$("#SelectAte").select2();
+	$("#SelectTam").select2();
+	$("#SelectSim").select2();
+
+	$("#SelectCalci").select2();
+	$("#SelectArvBrot").select2();
+	$("#SelectCavit").select2();
+}
+$(document).ready(function() {
+	// Load script of Select2 and run this
+	LoadSelect2Script(Select2Test);
+	WinMove();
+});
+</script>

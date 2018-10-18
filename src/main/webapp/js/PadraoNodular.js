@@ -52,8 +52,8 @@ for(var i = 0; i<5;i++){
 	console.log("");
 }
 
-for(var i in ans){
-	document.getElementById(i).style.display = "block";
-}
+//for(var i in ans){
+//	document.getElementById(i).style.display = "block";
+//}
 
 var seperationSize; // To seperate training and test data
