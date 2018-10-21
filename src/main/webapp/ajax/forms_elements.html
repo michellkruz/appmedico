@@ -597,39 +597,39 @@ $(document).ready(function() {
 	
 	$( "#SelectNod" ).change(function() {
 		console.log($(this).prop("selectedIndex"));
-		 prev[0] = $(this).prop("selectedIndex"); 
+		 prev[0] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectCont" ).change(function() {
-		 prev[1] = $(this).prop("selectedIndex"); 
+		 prev[1] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectQtd" ).change(function() {
-		 prev[2] = $(this).prop("selectedIndex"); 
+		 prev[2] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectAte" ).change(function() {
-		 prev[3] = $(this).prop("selectedIndex");
+		 prev[3] = $(this).prop("selectedIndex") -1;
 	});
 	
 	$( "#SelectTam" ).change(function() {
-		 prev[4] = $(this).prop("selectedIndex"); 
+		 prev[4] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectSim" ).change(function() {
-		 prev[8] = $(this).prop("selectedIndex"); 
+		 prev[8] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectCalci" ).change(function() {
-		 prev[5] = $(this).prop("selectedIndex"); 
+		 prev[5] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectArvBrot" ).change(function() {
-		 prev[6] = $(this).prop("selectedIndex"); 
+		 prev[6] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectCavit" ).change(function() {
-		 prev[7] = $(this).prop("selectedIndex"); 
+		 prev[7] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectAch" ).change(function() {
@@ -640,11 +640,11 @@ $(document).ready(function() {
 	});
 	
 	$( "#SelectSex" ).change(function() {
-		 prev[103] = $(this).prop("selectedIndex"); 
+		 prev[103] = $(this).prop("selectedIndex") -1; 
 	});
 	
 	$( "#SelectIda" ).change(function() {
-		 prev[$(this).prop("selectedIndex") + 104] = 1;
+		 prev[$(this).prop("selectedIndex") -1 + 104] = 1;
 	});	
 
 	$( ".checkbox input" ).each(function( index ) {
