@@ -439,7 +439,7 @@
 				<div class="no-move"></div>
 			</div>
 			<div class="box-content">
-				<div id=0 style="display: none">
+				<div id=0 style="display: block">
 					<span>TUBERCULOSE POS-PRIMARIA ATIVA</span><br>
 					<span>
 						<b>CLINICA</b><br>
@@ -458,6 +458,18 @@
 						7	PNEUMONIA BACTERIANA<br>
 					</span>
 					https://radiopaedia.org/cases/post-primary-tuberculosis-5
+					
+					<div id="simple_gallery" class="box-content">
+					
+						<a class="fancybox" rel="gallery1" href="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_AXIAL.png" title="Tuberculose Pós-Primaria Ativa Axial">
+							<img src="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_AXIAL.png" alt="" />
+						</a>
+						
+						<a class="fancybox" rel="gallery1" href="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_CORONAL.png" title="Tuberculose Pós-Primaria Ativa Coronal">
+							<img src="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_CORONAL.png" alt="" />
+						</a>
+						
+					<div>
 				</div>
 				<br>
 				
@@ -663,6 +675,21 @@ $(document).ready(function() {
 	});
 	
 });
+
+
+
+//Create fancybox2 gallery
+function DemoGallery(){
+	$('.fancybox').fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+}
+$(document).ready(function() {
+	// Load Fancybox2 and make gallery in callback
+	LoadFancyboxScript(DemoGallery);
+});
+
 </script>
 
 </body>
