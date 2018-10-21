@@ -28,9 +28,6 @@
 					<a class="expand-link">
 						<i class="fa fa-expand"></i>
 					</a>
-					<a class="close-link">
-						<i class="fa fa-times"></i>
-					</a>
 				</div>
 				<div class="no-move"></div>
 			</div>
@@ -104,6 +101,7 @@
 						</select>
 					</div>
 				</div>
+				<button id="btn-info" class="btn btn-primary btn-block" type="button">OK</button>
 			</div>
 		</div>
 
@@ -119,9 +117,6 @@
 					</a>
 					<a class="expand-link">
 						<i class="fa fa-expand"></i>
-					</a>
-					<a class="close-link">
-						<i class="fa fa-times"></i>
 					</a>
 				</div>
 				<div class="no-move"></div>
@@ -172,9 +167,6 @@
 					</a>
 					<a class="expand-link">
 						<i class="fa fa-expand"></i>
-					</a>
-					<a class="close-link">
-						<i class="fa fa-times"></i>
 					</a>
 				</div>
 				<div class="no-move"></div>
@@ -442,9 +434,6 @@
 					<a class="expand-link">
 						<i class="fa fa-expand"></i>
 					</a>
-					<a class="close-link">
-						<i class="fa fa-times"></i>
-					</a>
 				</div>
 				<div class="no-move"></div>
 			</div>
@@ -479,7 +468,7 @@
 							<img src="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_CORONAL.png" alt="" />
 						</a>
 						
-					<div>
+					</div>
 				</div>
 				<br>
 				
@@ -573,6 +562,7 @@
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript">
 // Run Select2 on element
 function Select2Test(){
@@ -607,8 +597,8 @@ $(document).ready(function() {
 	//[1, 2, 3].fill(4, 1, 2); ind inicial - ind final
 	console.log(prev);
 	
-	$( "#SelectNod" ).change(function() {
-		console.log($(this).prop("selectedIndex"));
+/* 	$( "#SelectNod" ).change(function() {
+		//console.log($(this).prop("selectedIndex"));
 		 prev[0] = $(this).prop("selectedIndex") -1; 
 	});
 	
@@ -630,7 +620,7 @@ $(document).ready(function() {
 	
 	$( "#SelectSim" ).change(function() {
 		 prev[8] = $(this).prop("selectedIndex") -1; 
-	});
+	}); */
 	
 	$( "#SelectCalci" ).change(function() {
 		 prev[5] = $(this).prop("selectedIndex") -1; 
@@ -686,6 +676,19 @@ $(document).ready(function() {
 			 prev[ans[i]] = 1;
 		 }
 	});
+	
+	$("#btn-info").click(function(){
+		//console.log($(this).closest("div.box").find("a.collapse-link"));
+		prev[0] = $("#SelectNod").prop("selectedIndex") -1; 
+		prev[1] = $("#SelectCont").prop("selectedIndex") -1; 
+		prev[2] = $("#SelectQtd").prop("selectedIndex") -1; 
+		prev[3] = $("#SelectAte").prop("selectedIndex") -1; 
+		prev[4] = $("#SelectTam").prop("selectedIndex") -1; 
+		prev[8] = $("#SelectSim").prop("selectedIndex") -1; 
+		//console.log(prev);
+		
+		$(this).closest("div.box").find("a.collapse-link").trigger("click");
+	}); 	 
 	
 });
 
