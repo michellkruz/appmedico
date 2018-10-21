@@ -198,7 +198,7 @@
 				<h4 class="page-header">Por Região (Localizaçãoo)</h4>
 				<div class="row form-group">
 					<div class="col-sm-12">
-						<select multiple class="form-control" id="SelectQtd">
+						<select multiple class="form-control" id="SelectSegReg">
 							<option value="19">Difuso</option>
 							<option value="20">Peribroncovascular</option>
 							<option value="21">Peri-hilar</option>
@@ -512,7 +512,6 @@ $(document).ready(function() {
 	
 	$( "#SelectAch" ).change(function() {
 		 var ans = $(this).val(); 
-		 console.log(ans);
 		 for(var i in ans){
 			 prev[ans[i]] = 1;
 		 }
@@ -525,6 +524,34 @@ $(document).ready(function() {
 	$( "#SelectIda" ).change(function() {
 		 prev[$(this).prop("selectedIndex") + 104] = 1;
 	});	
+
+	$( ".checkbox input" ).each(function( index ) {
+		if($(this).is(':checked')){
+			//console.log( index + ": " + $(this).val() );
+			prev[$(this).val()] = 1;
+		}	  	
+	});	
+	
+	$( "#SelectSegLocal" ).change(function() {
+		 var ans = $(this).val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+	});
+	
+	$( "#SelectSegLobo" ).change(function() {
+		 var ans = $(this).val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+	});
+	
+	$( "#SelectSegReg" ).change(function() {
+		 var ans = $(this).val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+	});
 	
 });
 </script>
