@@ -741,11 +741,11 @@ function Select2Test(){
 	$("#SelectQtd").select2(); //2
 	$("#SelectAte").select2(); //3
 	$("#SelectTam").select2(); //4
-	$("#SelectSim").select2();//8
+	$("#SelectSim").select2();//5
 
-	$("#SelectCalci").select2(); //5
-	$("#SelectArvBrot").select2(); //6
-	$("#SelectCavit").select2(); //7
+	$("#SelectCalci").select2(); //6
+	$("#SelectArvBrot").select2(); //7
+	$("#SelectCavit").select2(); //8
 	
 	$("#SelectSegLocal").select2(); //9-13
 	$("#SelectSegLobo").select2(); //14-18
@@ -792,7 +792,7 @@ $(document).ready(function() {
 		 prev[8] = $(this).prop("selectedIndex") -1; 
 	}); */
 	
-	$( "#SelectCalci" ).change(function() {
+/* 	$( "#SelectCalci" ).change(function() {
 		 prev[5] = $(this).prop("selectedIndex") -1; 
 	});
 	
@@ -802,9 +802,9 @@ $(document).ready(function() {
 	
 	$( "#SelectCavit" ).change(function() {
 		 prev[7] = $(this).prop("selectedIndex") -1; 
-	});
+	}); */
 	
-	$( "#SelectAch" ).change(function() {
+/* 	$( "#SelectAch" ).change(function() {
 		 var ans = $(this).val(); 
 		 for(var i in ans){
 			 prev[ans[i]] = 1;
@@ -845,7 +845,7 @@ $(document).ready(function() {
 		 for(var i in ans){
 			 prev[ans[i]] = 1;
 		 }
-	});
+	}); */
 	
 	$("#btn-info").click(function(){
 		//console.log($(this).closest("div.box").find("a.collapse-link"));
@@ -854,11 +854,56 @@ $(document).ready(function() {
 		prev[2] = $("#SelectQtd").prop("selectedIndex") -1; 
 		prev[3] = $("#SelectAte").prop("selectedIndex") -1; 
 		prev[4] = $("#SelectTam").prop("selectedIndex") -1; 
-		prev[8] = $("#SelectSim").prop("selectedIndex") -1; 
+		prev[5] = $("#SelectSim").prop("selectedIndex") -1; 
 		//console.log(prev);
 		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
-	}); 	 
+	});
+	
+	$("#btn-carac1").click(function(){
+		prev[6] = $("#SelectCalci").prop("selectedIndex") -1; 
+		prev[7] = $("#SelectArvBrot").prop("selectedIndex") -1; 
+		prev[8] = $("#SelectCavit").prop("selectedIndex") -1; 
+		//console.log(prev);
+		
+		$(this).closest("div.box").find("a.collapse-link").trigger("click");
+	}); 
+	
+	$("#btn-carac2").click(function(){
+		var ans = $("#SelectSegLocal").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+		 
+		 ans = $("#SelectSegLobo").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+		 
+		 ans = $("#SelectSegReg").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+		 
+		 $( ".checkbox input" ).each(function( index ) {
+				if($(this).is(':checked')){
+					//console.log( index + ": " + $(this).val() );
+					prev[$(this).val()] = 1;
+				}	  	
+			});
+		 
+		 ans = $("#SelectAch").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+		 
+		 prev[103] = $("#SelectSex").prop("selectedIndex") -1;
+		 
+		 prev[$("#SelectIda").prop("selectedIndex") -1 + 104] = 1;
+		//console.log(prev);
+		
+		$(this).closest("div.box").find("a.collapse-link").trigger("click");
+	}); 
 	
 });
 
