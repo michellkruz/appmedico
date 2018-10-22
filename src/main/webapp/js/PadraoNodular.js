@@ -4,6 +4,8 @@
 import KNN from './knn.js';
 
 import euclidean from './euclidean.js';
+
+
 var dataset = [[0, 0, 0], [0, 1, 1], [1, 1, 0], [2, 2, 2], [1, 2, 2], [2, 1, 2]];
 var predictions = [0, 0, 0, 1, 1, 1];
 
@@ -86,3 +88,9 @@ export function calcKNN(previs){
 		console.log("");
 	}
 }
+
+
+//abrir a aba do resultado a parti do id
+
+//$('#ui-id-1').click();
+
