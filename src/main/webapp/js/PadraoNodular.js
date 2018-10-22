@@ -69,7 +69,7 @@ for(var i = 0; i<5;i++){
 //	document.getElementById(i).style.display = "block";
 //}
 
-function calcKNN(previs){
+export function calcKNN(previs){
 	var knn = new KNN(cincodoencas, classes, {k: 1});
 
 	var ans = knn.predict(previs);
