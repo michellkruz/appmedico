@@ -71,3 +71,42 @@ function sortFunction(a, b) {
 
 console.log(pesop);
 
+function calcPeso(previs){
+	var pesop = [];
+
+	for(var j = 0; j < cincodoencas.length; j++){
+		pesop[j] = new Array(2);
+		
+		pesop[j][0] = 0;
+		pesop[j][1] = j;	
+		for(var i = 0; i < previs.length; i++){
+			if(i <= 8 || i == 103){ //caracteristicas e sexo
+				if(previs[i] === cincodoencas[j][i]){
+					pesop[j][0] += pesosoma[i];
+				}else{
+					pesop[j][0] += pesosub[i];
+				}
+			}else if(i > 8 && i <= 102){ //local, assoc, achados
+				if(previs[i] === 1){
+					pesop[j][0] += pesosoma[i];
+				}else{
+					pesop[j][0] += pesosub[i];
+				}
+			}else{  //idade
+				if(previs[i] === cincodoencas[j][i]){
+					pesop[j][0] += pesosoma[i];
+					break;
+				}else{
+					pesop[j][0] += pesosub[i];
+				}
+			}
+		}
+		
+		console.log("predict "+ pesop[j][1], pesop[j][0]);
+		
+		pesop[j][0] = pesop[j][0] * 100 / pesodoencas[j];
+		
+		console.log("porcent "+ pesop[j][1], pesop[j][0]);
+	}
+}
+
