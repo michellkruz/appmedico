@@ -399,7 +399,7 @@ a.show-sidebar:hover {
   display: block;
   float: left;
   text-align: center;
-  color: #b8b8b8 !important;
+  color: black !important; /* #b8b8b8 */
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;

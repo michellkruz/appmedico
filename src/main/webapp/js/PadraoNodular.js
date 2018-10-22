@@ -56,4 +56,20 @@ for(var i = 0; i<5;i++){
 //	document.getElementById(i).style.display = "block";
 //}
 
-var seperationSize; // To seperate training and test data
+function calcKNN(previs){
+	var knn = new KNN(cincodoencas, classes, {k: 1});
+
+	var ans = knn.predict(previs);
+
+	console.log("Teste com a distancia Euclidiana");
+	for(var i = 0; i<cincodoencas.length;i++){
+		
+		for(var j = 0; j<cincodoencas.length;j++){
+			var e  = euclidean(cincodoencas[i], previs);
+
+			console.log("doença: " + i + " pred: " +j + " distancia: "+e);
+		}
+		
+		console.log("");
+	}
+}
