@@ -1,4 +1,4 @@
-export function squaredEuclidean(p, q) {
+function squaredEuclidean(p, q) {
   let d = 0;
   for (let i = 0; i < p.length; i++) {
     d += (p[i] - q[i]) * (p[i] - q[i]);
@@ -6,6 +6,6 @@ export function squaredEuclidean(p, q) {
   return d;
 }
 
-export default function euclidean(p, q) {
+function euclidean(p, q) {
   return Math.sqrt(squaredEuclidean(p, q));
 }

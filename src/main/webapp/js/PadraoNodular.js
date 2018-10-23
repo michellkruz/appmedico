@@ -1,14 +1,12 @@
 /**
  * 
  */
-import KNN from './knn.js';
+//import KNN from './knn.js';
+//
+//import euclidean from './euclidean.js';
 
-import euclidean from './euclidean.js';
-
-
-var dataset = [[0, 0, 0], [0, 1, 1], [1, 1, 0], [2, 2, 2], [1, 2, 2], [2, 1, 2]];
-var predictions = [0, 0, 0, 1, 1, 1];
-
+//var dataset = [[0, 0, 0], [0, 1, 1], [1, 1, 0], [2, 2, 2], [1, 2, 2], [2, 1, 2]];
+//var predictions = [0, 0, 0, 1, 1, 1];
 
 
 /*var cincodoencas = [[0,0,0,0,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0],
@@ -44,49 +42,100 @@ var predict = [
 	[0,1,2,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0]
 ];
 
+var pesosoma = [1,1,1,1,1,1,3,3,3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.5,0.5,0.5,0.5,0.5,0.5,0.5];
+var pesosub = [-1,-1,-1,-1,-1,-1,-3,-3,-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+var pesodoencas = [17.599999999999994, 18.199999999999992, 16.999999999999996, 17.199999999999996, 16.999999999999996];
+
+var predict = [0,1,2,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0];
+
+var pesop = [];
 
 //var knn = new KNN(dataset, predictions);
-var knn = new KNN(cincodoencas, classes, {k: 1});
+//var knn = new KNN(cincodoencas, classes, {k: 1});
 //var dataset = [[0, 0, 0], [2, 2, 2]];
 
 //var ans = knn.predict(dataset);
-var ans = knn.predict(predict);  // resutado correto [ 0,1,2,3,4]
+//var ans = knn.predict(predict);  // resutado correto [ 0,1,2,3,4]
 
-console.log(ans);
-
-
-console.log("Teste com a distancia Euclidiana");
-for(var i = 0; i<5;i++){
-	
-	for(var j = 0; j<5;j++){
-		var e  = euclidean(cincodoencas[i], predict[j]);
-
-		console.log("doença: " + i + " pred: " +j + " distancia: "+e);
-	}
-	
-	console.log("");
-}
+//console.log(ans);
 
 //for(var i in ans){
 //	document.getElementById(i).style.display = "block";
 //}
 
-export function calcKNN(previs){
-	var knn = new KNN(cincodoencas, classes, {k: 1});
+//for(var j = 0; j < 5; j++){
+//	pesodoencas[j] = 16;
+//	for(var i = 9; i < 103; i++){
+//		if(cincodoencas[j][i] === 1) pesodoencas[j] += pesosoma[i];		
+//	}
+//	
+//	console.log("doenca "+ j, pesodoencas[j]);
+//}
 
-	var ans = knn.predict(previs);
-
+function calcEuclid(previs){
+//	var knn = new KNN(cincodoencas, classes, {k: 1});
+//
+//	var ans = knn.predict(previs);
 	console.log("Teste com a distancia Euclidiana");
 	for(var i = 0; i<cincodoencas.length;i++){
 		
-		for(var j = 0; j<cincodoencas.length;j++){
+		//for(var j = 0; j<previs.length;j++){
 			var e  = euclidean(cincodoencas[i], previs);
 
-			console.log("doença: " + i + " pred: " +j + " distancia: "+e);
-		}
+			console.log("doença: " + i + " pred: 1 distancia: "+e);
+		//}
 		
 		console.log("");
 	}
+}
+
+function calcPeso(previs){
+	var pesop = [];
+
+	for(var j = 0; j < cincodoencas.length; j++){
+		pesop[j] = new Array(2);
+		
+		pesop[j][0] = 0;
+		pesop[j][1] = j;	
+		for(var i = 0; i < previs.length; i++){
+			if(i <= 8 || i == 103){ //caracteristicas e sexo
+				if(previs[i] === cincodoencas[j][i]){
+					pesop[j][0] += pesosoma[i];
+				}else{
+					pesop[j][0] += pesosub[i];
+				}
+			}else if(i > 8 && i <= 102){ //local, assoc, achados
+				if(previs[i] === 1){
+					pesop[j][0] += pesosoma[i];
+				}else{
+					pesop[j][0] += pesosub[i];
+				}
+			}else{  //idade
+				if(previs[i] === cincodoencas[j][i]){
+					pesop[j][0] += pesosoma[i];
+					break;
+				}else{
+					pesop[j][0] += pesosub[i];
+				}
+			}
+		}
+		
+		console.log("predict "+ pesop[j][1], pesop[j][0]);
+		
+		pesop[j][0] = pesop[j][0] * 100 / pesodoencas[j];
+		
+		console.log("porcent "+ pesop[j][1], pesop[j][0]);
+	}
+}
+
+function sortFunction(a, b) {
+    if (a[0] === b[0]) {
+        return 0;
+    }
+    else {
+        return (a[0] < b[0]) ? -1 : 1;
+    }
 }
 
 
