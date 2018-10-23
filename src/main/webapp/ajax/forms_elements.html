@@ -857,7 +857,8 @@ $(document).ready(function() {
 		prev[5] = $("#SelectSim").prop("selectedIndex") -1; 
 		//console.log(prev);
 		
-		calcKNN(prev.slice(0,6));
+		calcEuclid(prev.slice(0,6));
+		calcPeso(prev.slice(0,6));
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	});
 	
