@@ -23,7 +23,7 @@ var cincodoencas = [[0,0,0,0,1,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 	[0,1,2,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,2,0,0,0,1,0,0]
 ];
 
-var classes = [0,1,2,3,4];
+//var classes = [0,1,2,3,4];
 
 /*var predict = [
 	[0,0,0,0,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0],
@@ -47,9 +47,8 @@ var pesosub = [-1,-1,-1,-1,-1,-1,-3,-3,-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 
 var pesodoencas = [17.599999999999994, 18.199999999999992, 16.999999999999996, 17.199999999999996, 16.999999999999996];
 
-var predict = [0,1,2,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0];
-
 var pesop = [];
+var distancias = [];
 
 //var knn = new KNN(dataset, predictions);
 //var knn = new KNN(cincodoencas, classes, {k: 1});
@@ -60,10 +59,6 @@ var pesop = [];
 
 //console.log(ans);
 
-//for(var i in ans){
-//	document.getElementById(i).style.display = "block";
-//}
-
 //for(var j = 0; j < 5; j++){
 //	pesodoencas[j] = 16;
 //	for(var i = 9; i < 103; i++){
@@ -73,21 +68,26 @@ var pesop = [];
 //	console.log("doenca "+ j, pesodoencas[j]);
 //}
 
-function calcEuclid(previs){
-//	var knn = new KNN(cincodoencas, classes, {k: 1});
-//
+function calcEuclid(previs){	
+//	var knn = new KNN(cincodoencas, classes, {k: 1});//
 //	var ans = knn.predict(previs);
+	
 	console.log("Teste com a distancia Euclidiana");
 	for(var i = 0; i<cincodoencas.length;i++){
+		distancias[i] = new Array(2);
+		distancias[i][1] = i;
 		
 		//for(var j = 0; j<previs.length;j++){
 			var e  = euclidean(previs, cincodoencas[i] );
-
 			console.log("doença: " + i + " pred: 1 distancia: "+e);
+			distancias[i][0] = e;
 		//}
 		
-		console.log("");
+		console.log("");	
 	}
+	
+	distancias.sort(sortFunction);
+	console.log(distancias);
 }
 
 function calcPeso(previs){
@@ -127,6 +127,9 @@ function calcPeso(previs){
 		
 		console.log("porcent "+ pesop[j][1], pesop[j][0]);
 	}
+	
+	pesop.sort(sortFunction);
+	console.log(pesop);
 }
 
 function sortFunction(a, b) {
