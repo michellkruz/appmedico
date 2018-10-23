@@ -81,7 +81,7 @@ function calcEuclid(previs){
 	for(var i = 0; i<cincodoencas.length;i++){
 		
 		//for(var j = 0; j<previs.length;j++){
-			var e  = euclidean(cincodoencas[i], previs);
+			var e  = euclidean(previs, cincodoencas[i] );
 
 			console.log("doença: " + i + " pred: 1 distancia: "+e);
 		//}
