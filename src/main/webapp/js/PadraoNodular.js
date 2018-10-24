@@ -261,6 +261,29 @@ function minkowski_distance(p_value){
 //	3 
 //	1.44
 } 
+
+
+function square_rooted(x){
+	var soma = 0;
+	for(var a in x){
+		soma += (a * a);
+	}
+//	console.log("soma "+Math.sqrt(soma));
+	return Math.round(Math.sqrt(soma) * 100) / 100;
+}	     
+ 
+function cosine_similarity(){
+	console.log("consine similarity");
+	var previs = [0,1,0,1,4,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0];
+	for(var i = 0; i < cincodoencas.length; i++){
+		var numerator = 0;
+		for(var j = 0; j < previs.length; j++){
+			numerator += (cincodoencas[i][j] * previs[j]);
+		}
+		var denominator = square_rooted(cincodoencas[i])*square_rooted(previs);
+		console.log("Doenca "+i+ " "+numerator/denominator.toFixed(4));
+	}
+}
+ 
     
-	 
     
