@@ -266,14 +266,15 @@ function minkowski_distance(p_value){
 function square_rooted(x){
 	var soma = 0;
 	for(var a in x){
-		soma += (a * a);
+		//console.log(a);
+		soma += (x[a] * x[a]);
 	}
 //	console.log("soma "+Math.sqrt(soma));
 	return Math.round(Math.sqrt(soma) * 100) / 100;
 }	     
  
 function cosine_similarity(){
-	console.log("consine similarity");
+	console.log("cosine similarity");
 	var previs = [0,1,0,1,4,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0];
 	for(var i = 0; i < cincodoencas.length; i++){
 		var numerator = 0;
@@ -283,6 +284,36 @@ function cosine_similarity(){
 		var denominator = square_rooted(cincodoencas[i])*square_rooted(previs);
 		console.log("Doenca "+i+ " "+numerator/denominator.toFixed(4));
 	}
+	
+//	Doenca 0 0.4052812651980474 
+//	Doenca 1 0.6661714792004609 
+//	Doenca 2 0.8261020717951543 
+//	Doenca 3 0.6883575788169428
+//	Doenca 4 0.9505890374138734
+	
+//	Doenca 0 0.47171429551614125 
+//	Doenca 1 0.6026733320222545
+//	Doenca 2 0.7539154434661755 
+//	Doenca 3 0.9988887362808875 
+//	Doenca 4 0.6867360061931101
+	
+//	Doenca 0 0.45031251688671936 
+//	Doenca 1 0.6661714792004609 
+//	Doenca 2 0.96378575042768 
+//	Doenca 3 0.7539154434661755
+//	Doenca 4 0.8194733081154081
+	
+//	Doenca 0 0.3105140041815886 
+//	Doenca 1 0.8421600640041649 
+//	Doenca 2 0.7120506663607487 
+//	Doenca 3 0.6404122748197427
+//	Doenca 4 0.7910975159537998
+	
+//	Doenca 0 0.9085717252479103 
+//	Doenca 1 0.33602473142023254
+//	Doenca 2 0.4464595755657635
+//	Doenca 3 0.5196424859696529 
+//	Doenca 4 0.47240225997241175
 }
  
     
