@@ -173,3 +173,94 @@ function resultado_peso(resul){
 
 //$('#ui-id-1').click();
 
+function distanciaManhattan(){
+	var previs = [0,0,0,0,1,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0];
+	
+	for(var i = 0; i < cincodoencas.length; i++){
+		var dm = 0;
+		for(var j = 0; j < previs.length; j++){
+			dm += Math.abs(cincodoencas[i][j] - previs[j]);
+		}		
+		console.log("Doenca "+i+" Distancia "+dm);
+	}
+	
+//	Doenca 0 Distancia 20
+//	Doenca 1 Distancia 16
+//	Doenca 2 Distancia 10 
+//	Doenca 3 Distancia 15 
+//	Doenca 4 Distancia 3
+	
+//	Doenca 0 Distancia 18 
+//	Doenca 1 Distancia 18 
+//	Doenca 2 Distancia 10 
+//	Doenca 3 Distancia 5 
+//	Doenca 4 Distancia 13
+	
+//	Doenca 0 Distancia 20 
+//	Doenca 1 Distancia 18 
+//	Doenca 2 Distancia 2 
+//	Doenca 3 Distancia 13 
+//	Doenca 4 Distancia 11
+	
+//	Doenca 0 Distancia 19 
+//	Doenca 1 Distancia 9 
+//	Doenca 2 Distancia 13 
+//	Doenca 3 Distancia 16 
+//	Doenca 4 Distancia 8
+	
+//	Doenca 0 Distancia 3 
+//	Doenca 1 Distancia 23 
+//	Doenca 2 Distancia 19 
+//	Doenca 3 Distancia 18 
+//	Doenca 4 Distancia 18
+}
+
+function nth_root(value, n_root){
+	var root_value = 1/n_root.toFixed(2);
+	return Math.round (Math.pow(value.toFixed(4), root_value.toFixed(4)) * 100) / 100;
+}
+
+function minkowski_distance(p_value){
+	var previs = [0,1,0,1,4,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0];
+	console.log("minkowski_distance");
+	for(var i = 0; i < cincodoencas.length; i++){
+		var soma = 0;
+		for(var j = 0; j < previs.length; j++){
+			soma += Math.pow(Math.abs(cincodoencas[i][j] - previs[j]), p_value);
+		}
+		console.log(nth_root(soma, p_value));
+	}
+	
+//	1.44 
+//	3.76 
+//	3.5 
+//	3.48 
+//	3.63
+	
+//	3.66 
+//	2.08 
+//	2.67 
+//	3.04 
+//	2.71
+	
+//	3.53 
+//	2.88 
+//	1.26 
+//	2.67 
+//	2.22
+	
+//	3.48 
+//	2.88 
+//	2.15 
+//	1.71 
+//	2.67	
+	
+//	3.68 
+//	3.04 
+//	2.15 
+//	3 
+//	1.44
+} 
+    
+	 
+    
