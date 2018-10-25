@@ -38,8 +38,7 @@
 						<select id="SelectNod">
 							<option></option>
 							<option>Centrolobular</option>
-							<option>Massa/Nódulo</option>
-							<option>Periférico</option>
+							<option>Perilinfático</option>
 							<option>Randômico</option>
 						</select>
 					</div>
@@ -84,8 +83,6 @@
 							<option></option>
 							<option>Menor que 3mm</option>
 							<option>Menor que 1cm</option>
-							<option>1-3cm</option>
-							<option>Maior que 3cm</option>
 							<option>Variável</option>
 						</select>
 					</div>
@@ -328,67 +325,94 @@
 						</div>
 					</div>
 				</div>
-				<h4 class="page-header">Achados Secundários</h4>
+				<h4 class="page-header">Achados Secundários (Sinais)</h4>
 				<div class="row form-group">
 					<div class="col-sm-12">
-						<select multiple id="SelectAch">
-							<option value="46">Abaulamento Do Septo Interventricular Para Esquerda</option>
-							<option value="47">Aero Broncograma</option>
-							<option value="48">Aprisionamento De Ar A Expiração Forçada</option>
-							<option value="49">Arvore Em Brotamento</option>
-							<option value="50">Aspergiloma</option>
-							<option value="51">Atelectasias</option>
-							<option value="52">Ausente</option>
-							<option value="53">Bandas Parenquimatosas</option>
-							<option value="54">Broncograma Aéreo</option>
-							<option value="55">Bronquiectasia Cística</option>
-							<option value="56">Bronquiectasias</option>
-							<option value="57">Bronquiectasias De Tração</option>
-							<option value="58">Bronquiolectasias De Tração</option>
-							<option value="59">Calcificações Vasculares</option>
-							<option value="60">Cistos Subpleurais</option>
-							<option value="61">Complexo De Ranke</option>
-							<option value="62">Curvilínea Subpleural</option>
-							<option value="63">Derrame Pericárdico</option>
-							<option value="64">Derrame Pleural</option>
-							<option value="65">Dilatação Da Artéria Pulmonar</option>
-							<option value="66">Dilatação Das Câmaras Cardíacas</option>
-							<option value="67">Distorção Broncovascular</option>
-							<option value="68">Distorção Da Arquitetura Pulmonar</option>
-							<option value="69">Espessamento Brônquico</option>
-							<option value="70">Espessamento Da Parede Bronquiolar</option>
-							<option value="71">Espessamento Da Parede Cavitária</option>
-							<option value="72">Espessamento Da Traquéia</option>
-							<option value="73">Espessamento Do Interstício Peribroncovascular</option>
-							<option value="74">Espessamento Dos Septos Interlobulares</option>
-							<option value="75">Espessamento Nodular Da Traquéia</option>
-							<option value="76">Espessamento Pleural</option>
-							<option value="77">Estreitamento Luminal Da Traquéia</option>
-							<option value="78">Hipertrofia Da Artéria Brônquicar</option>
-							<option value="79">Hipertrofia Do Ventrículo Direito</option>
-							<option value="80">Impactação Mucóide</option>
-							<option value="81">Insuficiência Cardíaca Direita</option>
-							<option value="82">Linfonodo Hilar Calcificado</option>
-							<option value="83">Linfonodomegalia Hilar</option>
-							<option value="84">Linfonodomegalia Mediastinal</option>
-							<option value="85">Linfonodomegalias</option>
-							<option value="86">Linfonodos Calcificados</option>
-							<option value="87">Massa Conglomerada</option>
-							<option value="88">Massa Espongiformer</option>
-							<option value="89">Micronódulos Miliares</option>
-							<option value="90">Multiplos Vasos Perialveolares</option>
-							<option value="91">Nódulo De Gohn</option>
-							<option value="92">Nódulo De Gohn</option>
-							<option value="93">Pavimentação Em Mosaico</option>
-							<option value="94">Placas Pleurais</option>
-							<option value="95">Pneumotórax</option>
-							<option value="96">Redução Do Calibre Das Vias Aéreas</option>
-							<option value="97">Sinal Do Angiograma</option>
-							<option value="98">Sinal Do Crescente Aéreo</option>
-							<option value="99">Sinal Do Halo</option>
-							<option value="100">Sinal Do Halo Em Vidro Fosco</option>
-							<option value="101">Sinal Do Halo Invertido</option>
-							<option value="102">Trombos Muras Das Artérias  Proximais</option>
+						<select multiple id="SelectAchSin">
+							<option value="46">Aero Broncograma</option>
+							<option value="47">Ausente</option>
+							<option value="48">Sinal Do Angiograma</option>
+							<option value="49">Sinal Do Crescente Aéreo</option>
+							<option value="50">Sinal Do Halo</option>
+							<option value="51">Sinal Do Halo Em Vidro Fosco</option>
+							<option value="52">Sinal Do Halo Invertido</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Achados Secundários (Extraparenquimatoso)</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple id="SelectAchExt">
+							<option value="53">Ausente</option>
+							<option value="54">Cistos Subpleurais</option>
+							<option value="55">Complexo De Ranke</option>
+							<option value="56">Curvilínea Subpleural</option>
+							<option value="57">Derrame Pleural</option>
+							<option value="58">Distorção Broncovascular</option>
+							<option value="59">Espessamento Brônquico</option>
+							<option value="60">Espessamento Da Parede Bronquiolar</option>
+							<option value="61">Espessamento Da Parede Cavitária</option>
+							<option value="62">Espessamento Da Traquéia</option>
+							<option value="63">Espessamento Nodular Da Traquéia</option>
+							<option value="64">Espessamento Pleural</option>
+							<option value="65">Estreitamento Luminal Da Traquéia</option>
+							<option value="66">Impactação Mucóide</option>
+							<option value="67">Linfonodo Hilar Calcificado</option>
+							<option value="68">Linfonodomegalia Hilar</option>
+							<option value="69">Linfonodomegalia Mediastinal</option>
+							<option value="70">Linfonodomegalias</option>
+							<option value="71">Linfonodos Calcificados</option>
+							<option value="72">Nódulo De Gohn</option>
+							<option value="73">Placas Pleurais</option>
+							<option value="74">Pneumotórax</option>
+							<option value="75">Redução Do Calibre Das Vias Aéreas</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Achados Secundários (Parenquimatoso)</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple id="SelectAchPar">
+							<option value="76">Aprisionamento De Ar A Expiração Forçada</option>
+							<option value="77">Arvore Em Brotamento</option>
+							<option value="78">Aspergiloma</option>
+							<option value="79">Atelectasias</option>
+							<option value="80">Atelectasia Laminar</option>
+							<option value="81">Atelectasia Redonda</option>
+							<option value="82">Atelectasia Pendente</option>
+							<option value="83">Ausente</option>
+							<option value="84">Bandas Parenquimatosas</option>
+							<option value="85">Broncograma Aéreo</option>
+							<option value="86">Bronquiectasia Cística</option>
+							<option value="87">Bronquiectasias</option>
+							<option value="88">Bronquiectasias De Tração</option>
+							<option value="89">Bronquiolectasias De Tração</option>
+							<option value="90">Distorção Da Arquitetura Pulmonar</option>
+							<option value="91">Espessamento Do Interstício Peribroncovascular</option>
+							<option value="92">Espessamento Dos Septos Interlobulares</option>
+							<option value="93">Massa Conglomerada</option>
+							<option value="94">Massa Espongiforme</option>
+							<option value="95">Micronódulos Miliares</option>
+							<option value="96">Multiplos Vasos Perialveolares</option>
+							<option value="97">Nódulo Necrótico</option>
+							<option value="98">Pavimentação Em Mosaico</option>
+						</select>
+					</div>
+				</div>
+				<h4 class="page-header">Achados Secundários (Cardiovascular)</h4>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<select multiple id="SelectAchCar">
+							<option value="99">Abaulamento Do Septo Interventricular Para Esquerda</option>
+							<option value="100">Ausente</option>
+							<option value="101">Calcificações Vasculares</option>
+							<option value="102">Derrame Pericárdico</option>
+							<option value="103">Dilatação Da Artéria Pulmonar</option>
+							<option value="104">Dilatação Das Câmaras Cardíacas</option>
+							<option value="105">Hipertrofia Da Artéria Brônquica</option>
+							<option value="106">Hipertrofia Do Ventrículo Direito</option>
+							<option value="107">Insuficiência Cardíaca Direita</option>
+							<option value="108">Trombos Muras Das Artérias Proximais</option>
 						</select>
 					</div>
 				</div>
@@ -408,12 +432,12 @@
 					<div class="col-sm-12">
 						<select id="SelectIda">
 							<option></option>
-							<option value="104">Bebê</option>
-							<option value="105">Criança</option>
-							<option value="106">Adolescente</option>
-							<option value="107">Adulto</option>
-							<option value="108">Idoso</option>
-							<option value="109">Sem Predileção</option>
+							<option value="110">Bebê</option>
+							<option value="111">Criança</option>
+							<option value="112">Adolescente</option>
+							<option value="113">Adulto</option>
+							<option value="114">Idoso</option>
+							<option value="115">Sem Predileção</option>
 						</select>
 					</div>
 				</div>
@@ -532,7 +556,7 @@
 					<div id="tabs-3" >
 						
 						<div id=2 >
-							<span><h3>ASPERGILOSE PULMON ANGIOINVA</h3></span><br>
+							<span><h3>ASPERGILOSE PULMONAR ANGIOINVASIVA</h3></span><br>
 							<span>
 								<b>CLINICA</b><br>
 								<ul>
@@ -625,140 +649,7 @@
 					</div>
 				
 				
-				</div>
-			
-			
-			
-			
-<!-- 				<div id=0 style="display: none"> -->
-<!-- 					<span><h3>TUBERCULOSE POS-PRIMARIA ATIVA</h3></span><br> -->
-<!-- 					<span> -->
-<!-- 						<b>CLÍNICA</b><br> -->
-<!-- 						<ul> -->
-<!-- 						<li>DISCORDÂNCIA CLÍNICO-RADIOLÓGICA</li> -->
-<!-- 						<li>TOSSE PERSISTENTE</li> -->
-<!-- 						<li>FEBRE BAIXA</li> -->
-<!-- 						</ul> -->
-<!-- 					</span> -->
-<!-- 					<span> -->
-						
-<!-- 						<b>DIAGNÓSTICO DIFERENCIAL</b><br>	 -->
-<!-- 						<ul> -->
-<!-- 						1.	LINFOMA<br> -->
-<!-- 						2.	METASTASE<br> -->
-<!-- 						3.	INFECÇÃO FUNGICA<br> -->
-<!-- 						4.	SILICOSE<br> -->
-<!-- 						5.	SARCOIDOSE<br> -->
-<!-- 						6.	MICOBACTERIOSE ATÍPICA<br> -->
-<!-- 						7.	PNEUMONIA BACTERIANA<br> -->
-<!-- 						</ul> -->
-<!-- 					</span> -->
-						
-<!-- 					https://radiopaedia.org/cases/post-primary-tuberculosis-5 -->
-					
-<!-- 					<div id="simple_gallery" class="box-content"> -->
-					
-<!-- 						<a class="fancybox" rel="gallery1" href="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_AXIAL.png" title="Tuberculose Pós-Primaria Ativa Axial"> -->
-<!-- 							<img src="./img/fotos 5 doencas/miniaturas/1 TUBERCULOSE POS PRIMARIA ATIVA_AXIAL.png" alt="" /> -->
-<!-- 						</a> -->
-						
-<!-- 						<a class="fancybox" rel="gallery1" href="./img/fotos 5 doencas/1 TUBERCULOSE POS PRIMARIA ATIVA_CORONAL.png" title="Tuberculose Pós-Primaria Ativa Coronal"> -->
-<!-- 							<img src="./img/fotos 5 doencas/miniaturas/1 TUBERCULOSE POS PRIMARIA ATIVA_CORONAL.png" alt="" /> -->
-<!-- 						</a> -->
-						
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 				<br> -->
-				
-<!-- 				<div id=1 style="display: none"> -->
-<!-- 					<span><h2>PNEUMONITE DE HIPERSENSIBILI</h2></span><br> -->
-<!-- 					<span> -->
-<!-- 						<b>CLINICA</b><br> -->
-<!-- 						EXPOSIÇAO A PÁSSAROS<br> -->
-<!-- 						TRABALHO NO CAMPO<br> -->
-<!-- 					</span> -->
-<!-- 					<span> -->
-<!-- 						<b>DIAGNÓSTICO DIFERENCIAL</b><br>	 -->
-<!-- 						BRONQUIOLITTE RESPIRATÓRIA<br> -->
-<!-- 						PNEUMOCONIOSES<br> -->
-<!-- 						HIPERTENSÃO PULMONAR IDIOPÁTICA<br> -->
-<!-- 						PNEUMONIA INTERSTICIAL NÃO-ESPECÍFICA<br> -->
-<!-- 						PNEUMONIA INTERSTICIAL DESCAMATIVA<br> -->
-<!-- 						PNEUMONIA ASPIRATIVA CRÔNICA<br> -->
-<!-- 						DOENÇAS DO COLÁGENO<br> -->
-<!-- 					</span> -->
-<!-- 					https://radiopaedia.org/cases/acute-hypersensitivity-pneumonitis-1 -->
-<!-- 				</div> -->
-<!-- 				<br> -->
-				
-<!-- 				<div id=2 style="display: none"> -->
-<!-- 					<span>ASPERGILOSE PULMON ANGIOINVA</span><br> -->
-<!-- 					<span> -->
-<!-- 						<b>CLINICA</b><br> -->
-<!-- 						IMUNOCOMPROMETIDOS<br> -->
-<!-- 						NEUTROPENIA<br> -->
-<!-- 						IMUNOSSUPRIMIDOS<br> -->
-<!-- 						USO CRONICO DE CORTICOSTERÓIDES<br> -->
-<!-- 						TRANSPLANTADOS<br> -->
-<!-- 						PORTADOR DE NEOPLASIA<br> -->
-<!-- 					</span> -->
-<!-- 					<span> -->
-<!-- 						<b>DIAGNÓSTICO DIFERENCIAL</b><br>	 -->
-<!-- 						EMBOLISMO SÉPTICO<br> -->
-<!-- 						GRANULOMATOE DE WEGENER<br> -->
-<!-- 						CANDIDÍASE<br> -->
-<!-- 						PNEUMONIA POR CITOMEGALOVÍRUS<br> -->
-<!-- 						PNEUMONIA POR VARICELA<br> -->
-<!-- 						TUBERCULOSE<br> -->
-<!-- 						SÍNDROME DE CHURG-STRAUSS<br> -->
-<!-- 						SARCOMA DE KAPOSI<br> -->
-<!-- 						ADENOCARCINOMA<br> -->
-<!-- 						METÁSTASE HEMORRÁGICA<br> -->
-<!-- 					</span> -->
-<!-- 					https://radiopaedia.org/cases/angioinvasive-aspergillosis	 -->
-<!-- 				</div> -->
-<!-- 				<br> -->
-				
-<!-- 				<div id=3 style="display: none"> -->
-<!-- 					<span>BRONCOPNEUMONIA</span><br> -->
-<!-- 					<span> -->
-<!-- 						<b>CLINICA</b><br> -->
-<!-- 						TOSSE<br> -->
-<!-- 						FEBRE<br> -->
-<!-- 						ASTENIA<br> -->
-<!-- 					</span> -->
-<!-- 					<span> -->
-<!-- 						<b>DIAGNÓSTICO DIFERENCIAL</b><br>	 -->
-<!-- 						PNEUMONIA EM ORGANIZAÇÃO<br> -->
-<!-- 						HEMORRAGIA PULMONAR<br> -->
-<!-- 						ASPIRAÇÃO PULMONAR<br> -->
-<!-- 					</span> -->
-<!-- 					https://radiopaedia.org/cases/community-acquired-pneumonia -->
-<!-- 				</div> -->
-<!-- 				<br> -->
-				
-<!-- 				<div id=4 style="display: none"> -->
-<!-- 					<span>CARCINOMA BRONQUIOLOALVEOLAR</span><br> -->
-<!-- 					<span> -->
-<!-- 						<b>CLINICA</b><br> -->
-<!-- 						DISPNÉIA<br> -->
-<!-- 					</span> -->
-<!-- 					<span> -->
-<!-- 						<b>DIAGNÓSTICO DIFERENCIAL</b><br>	 -->
-<!-- 						OUTROS TUMORES PULMONARES<br> -->
-<!-- 						MATÁSTASE<br> -->
-<!-- 						BRONQUIOLITES RESPIRATÓRIA<br> -->
-<!-- 						TUBERCULOSE<br> -->
-<!-- 						PNEUMONIA BACTERIANA<br> -->
-<!-- 						PNEUMONIA EOSINOFÓLICA<br> -->
-<!-- 						PNEUMONIA LIPOÍDICA<br> -->
-<!-- 						LINFOMA PULMONAR<br> -->
-<!-- 					</span> -->
-<!-- 					https://radiopaedia.org/cases/bronchoalveolar-carcinoma-3 -->
-<!-- 				</div>				 -->
-			
-			
-			
+				</div>						
 			</div>
 		</div>
 	</div>
@@ -782,9 +673,13 @@ function Select2Test(){
 	$("#SelectSegLobo").select2(); //14-18
 	$("#SelectSegReg").select2(); //19-27
 	
-	$("#SelectAch").select2(); //46-102
-	$("#SelectSex").select2(); //103
-	$("#SelectIda").select2(); //104-109
+	$("#SelectAchSin").select2(); //46-52
+	$("#SelectAchExt").select2(); //53-75
+	$("#SelectAchPar").select2(); //76-98
+	$("#SelectAchCar").select2(); //99-108
+	
+	$("#SelectSex").select2(); //109
+	$("#SelectIda").select2(); //110-115
 }
 
 $(document).ready(function() {
@@ -799,7 +694,7 @@ $(document).ready(function() {
 	//console.log(prev);
 	//distanciaManhattan();
 	//minkowski_distance(3);
-	cosine_similarity();
+	//cosine_similarity();
 	
 	$("#btn-info").click(function(){
 		//console.log($(this).closest("div.box").find("a.collapse-link"));
@@ -850,14 +745,29 @@ $(document).ready(function() {
 				}	  	
 			});
 		 
-		 ans = $("#SelectAch").val(); 
+		 ans = $("#SelectAchSin").val(); 
 		 for(var i in ans){
 			 prev[ans[i]] = 1;
 		 }
 		 
-		 prev[103] = $("#SelectSex").prop("selectedIndex") -1;
+		 ans = $("#SelectAchExt").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
 		 
-		 prev[$("#SelectIda").prop("selectedIndex") -1 + 104] = 1;
+		 ans = $("#SelectAchPar").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+		 
+		 ans = $("#SelectAchCar").val(); 
+		 for(var i in ans){
+			 prev[ans[i]] = 1;
+		 }
+		 
+		 prev[109] = $("#SelectSex").prop("selectedIndex") -1;
+		 
+		 prev[$("#SelectIda").prop("selectedIndex") -1 + 110] = 1;
 		//console.log(prev);
 		
 		calcEuclid(prev);
