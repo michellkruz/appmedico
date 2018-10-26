@@ -9,6 +9,7 @@
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
 			<li><a href="#">Referências</a></li>
+			<li><a href="" id="refresh">Refresh</a></li>
 		</ol>
 	</div>
 </div>
@@ -784,6 +785,16 @@ $(document).ready(function() {
 		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	}); 
+	
+	$("#refresh").click(function(event){
+		event.preventDefault();
+		
+		var prev = new Array(115);
+		prev.fill(0);
+		
+		$('input:checkbox').prop('checked',false);
+		$('select').val(null).trigger('change');
+	});
 	
 });
 
