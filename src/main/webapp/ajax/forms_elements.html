@@ -72,7 +72,6 @@
 							<option></option>
 							<option>Partes Moles</option>
 							<option>Vidro Fosco</option>
-							<option>Partes Moles/Vidro Fosco</option>
 						</select>
 					</div>
 				</div>
@@ -688,13 +687,12 @@ $(document).ready(function() {
 	WinMove();
 	
 	//Criacao do vetor de previsao
-	var prev = new Array(110);
+	var prev = new Array(115);
 	prev.fill(0);
-	//[1, 2, 3].fill(4, 1, 2); ind inicial - ind final
 	//console.log(prev);
-	//distanciaManhattan();
-	//minkowski_distance(3);
-	//cosine_similarity();
+/* 	distanciaManhattan();
+	minkowski_distance(3);
+	cosine_similarity(); */
 	
 	$("#btn-info").click(function(){
 		//console.log($(this).closest("div.box").find("a.collapse-link"));
@@ -708,6 +706,10 @@ $(document).ready(function() {
 		
 		calcEuclid(prev.slice(0,6));
 		calcPeso(prev.slice(0,6));
+		distanciaManhattan(prev.slice(0,6));
+		minkowski_distance(prev.slice(0,6), 3);
+		cosine_similarity(prev.slice(0,6));
+		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	});
 	
@@ -719,6 +721,10 @@ $(document).ready(function() {
 		
 		calcEuclid(prev.slice(0,9));
 		calcPeso(prev.slice(0,9));
+		distanciaManhattan(prev.slice(0,9));
+		minkowski_distance(prev.slice(0,9), 3);
+		cosine_similarity(prev.slice(0,9));
+		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	}); 
 	
@@ -772,6 +778,10 @@ $(document).ready(function() {
 		
 		calcEuclid(prev);
 		calcPeso(prev);
+		distanciaManhattan(prev);
+		minkowski_distance(prev, 3);
+		cosine_similarity(prev);
+		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	}); 
 	
