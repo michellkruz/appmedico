@@ -136,6 +136,7 @@ function calcPeso(previs){
 	}
 	
 	pesop.sort(sortFunction);
+//	console.log("pesop")
 	console.log(pesop);
 	
 	resultado_peso(pesop)
@@ -152,26 +153,43 @@ function sortFunction(a, b) {
 
 function resultado_peso(resul){
 	
-//	for(var i=resul.length-1;i>=0;i--){
-//		
-//		
+	for(var i=resul.length-1;i>=0;i--){
+		
+		
 //		$("knn"+resul[i][2]).show();
-//		
-//		
-//	}
+		console.log("for" + resul[i][0] + " - " +resul[i][1])
+		
+		
+	}
+	
+	
 	
 	var id;
 	
 	var i=resul.length-1;
 	
+	for (var j=0; j<resul.length;j++){
+		id = resul[i][1];
+		document.getElementById('perc-knn'+ ( id+1) ).innerHTML = resul[j][0].toFixed(2) + "%";
+		
+		console.log('perc-knn'+ ( j+1) + " - " +resul[j][0].toFixed(2) + "%")
+	}
+	
 	while(i>0 && resul[i][0]>50.){
+		
 		console.log("resul")
 		console.log(resul[i][0] + " - " +resul[i][1])
 		id = resul[i][1];
 		console.log("id "+ "#knn" + (id+1) )
 		
 		$("#knn"+ ( id+1)   ).show();
-		$('#knn1').click();
+		
+		if(resul[i][0]>50.){
+			$("#knn"+ ( id+1) ).click();
+		}
+		
+		
+		
 		
 		i = i-1;	
 	}
