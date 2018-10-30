@@ -471,7 +471,7 @@
 			
 			<div id="tabs">
 					<ul class="text-center">
-						<li><a id="knn0" href="#tabs-0" style="display : none;">none</a></li>
+						<li><a id="knn0" href="#tabs-0" style="display : none;"></a></li>
 						
 						<li><a id="knn1" href="#tabs-1" style="display : none;">
 							Tuberculose<br>Pós Primaria Ativa<br>
@@ -850,6 +850,15 @@ $(document).ready(function() {
 		
 		$('input:checkbox').prop('checked',false);
 		$('select').val(null).trigger('change');
+		
+		//$("#tabs").hide();
+		/* $("#tabs").find("li").hide();
+		$("#tabs").find("div").hide(); */
+		//console.log($("[id^='tabs']"));
+		$("[id^='knn']").hide();
+		//$("[id^='tabs-']").hide(); 
+		$("#knn0").click();
+		//$("#knn0").show();
 	});
 	
 });
