@@ -141,6 +141,7 @@
 						</select>
 					</div>
 				</div>
+				<!-- 
 				<h4 class="page-header">Cavitação</h4>
 				<div class="row form-group">
 					<div class="col-sm-12">
@@ -151,6 +152,7 @@
 						</select>
 					</div>
 				</div>
+				 -->				
 				<button id="btn-carac1" class="btn btn-primary btn-block" type="button">OK</button>
 			</div>
 		</div>
@@ -223,105 +225,87 @@
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="29"> Cistos Verdadeiros (Padrão Cístico)
+								<input type="checkbox" value="29"> Consolidação
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="30"> Consolidação
+								<input type="checkbox" value="30"> Enfisema Centrolobular
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="31"> Enfisema
+								<input type="checkbox" value="31"> Enfisema Panlobular
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="32"> Enfisema Panlobular
+								<input type="checkbox" value="32"> Nódulos/Massas
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="33"> Faveolamento
+								<input type="checkbox" value="33"> Padrão Cístico - Cistos Verdadeiros
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="34"> Nódulos nas Fissuras Interlobares 
+								<input type="checkbox" value="34"> Padrão Cístico - Faveolamento
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="35"> Nódulos Peribroncovasculares
+								<input type="checkbox" value="35"> Padrão Nodular Centrolobular
 								<i class="fa fa-square-o small"></i>
 							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="36"> Nódulos Periféricos (Subpleurais)
-								<i class="fa fa-square-o small"></i>
-							</label>
-						</div>
+						</div>						
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="37"> Padrão Granular
+								<input type="checkbox" value="36"> Padrão Nodular Perilinfático
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="38"> Padrão Nodular Centrolobular
+								<input type="checkbox" value="37"> Padrão Nodular Randômico
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="39"> Padrão Nodular Randômico
+								<input type="checkbox" value="38"> Padrão Reticular
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="40"> Padrão Reticular
+								<input type="checkbox" value="39"> Padrão Septal Liso
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="41"> Padrão Septal
+								<input type="checkbox" value="40"> Padrão Septal Nodular
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="42"> Padrão Septal Liso
+								<input type="checkbox" value="41"> Perfusão Em Mosaico
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="43"> Padrão Septal Nodular
-								<i class="fa fa-square-o small"></i>
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="44"> Perfusão em Mosaico
-								<i class="fa fa-square-o small"></i>
-							</label>
-						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="45"> Vidro Fosco
+								<input type="checkbox" value="42"> Vidro Fosco
 								<i class="fa fa-square-o small"></i>
 							</label>
 						</div>
@@ -723,19 +707,19 @@ function Select2Test(){
 
 	$("#SelectCalci").select2(); //6
 	$("#SelectArvBrot").select2(); //7
-	$("#SelectCavit").select2(); //8
+	//$("#SelectCavit").select2(); //8
 	
-	$("#SelectSegLocal").select2(); //9-13
-	$("#SelectSegLobo").select2(); //14-18
-	$("#SelectSegReg").select2(); //19-27
+	$("#SelectSegLocal").select2(); //8-12
+	$("#SelectSegLobo").select2(); //13-17
+	$("#SelectSegReg").select2(); //18-26
 	
-	$("#SelectAchSin").select2(); //46-52
-	$("#SelectAchExt").select2(); //53-75
-	$("#SelectAchPar").select2(); //76-98
-	$("#SelectAchCar").select2(); //99-108
+	$("#SelectAchSin").select2(); //42-78
+	$("#SelectAchExt").select2(); //49-71
+	$("#SelectAchPar").select2(); //72-94
+	$("#SelectAchCar").select2(); //95-104
 	
-	$("#SelectSex").select2(); //109
-	$("#SelectIda").select2(); //110-115
+	$("#SelectSex").select2(); //105
+	$("#SelectIda").select2(); //106-111
 }
 
 $(document).ready(function() {
@@ -744,7 +728,7 @@ $(document).ready(function() {
 	WinMove();
 	
 	//Criacao do vetor de previsao
-	var prev = new Array(115);
+	var prev = new Array(112);
 	prev.fill(0);
 	//console.log(prev);
 /* 	distanciaManhattan();
@@ -773,7 +757,7 @@ $(document).ready(function() {
 	$("#btn-carac1").click(function(){
 		prev[6] = $("#SelectCalci").prop("selectedIndex") -1; 
 		prev[7] = $("#SelectArvBrot").prop("selectedIndex") -1; 
-		prev[8] = $("#SelectCavit").prop("selectedIndex") -1; 
+		//prev[8] = $("#SelectCavit").prop("selectedIndex") -1; 
 		//console.log(prev);
 		
 		calcEuclid(prev.slice(0,9));
@@ -786,51 +770,76 @@ $(document).ready(function() {
 	}); 
 	
 	$("#btn-carac2").click(function(){
-		var ans = $("#SelectSegLocal").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		//var ans = $("#SelectSegLocal").val(); 
+		$("#SelectSegLocal option").each(function(){
+			if(this.selected) prev[$(this).index() + 8] = 1;
+		});
+		 /* for(var i in ans){
+			 prev[ans[i]+ 8] = 1;
+		 } */
 		 
-		 ans = $("#SelectSegLobo").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		//ans = $("#SelectSegLobo").val();
+		 $("#SelectSegLobo option").each(function(){
+			 if(this.selected) prev[$(this).index() + 13] = 1;
+		});
+		 /* for(var i in ans){
+			 prev[ans[i] + 13] = 1;
+		 } */
 		 
-		 ans = $("#SelectSegReg").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		 //ans = $("#SelectSegReg").val();
+		 $("#SelectSegReg option").each(function(){
+			 if(this.selected) prev[$(this).index() + 18] = 1;
+		 });
+		 /* for(var i in ans){
+			 prev[ans[i] + 18] = 1;
+		 } */
 		 
+		 var cont =  0;
 		 $( ".checkbox input" ).each(function( index ) {
-				if($(this).is(':checked')){
-					//console.log( index + ": " + $(this).val() );
-					prev[$(this).val()] = 1;
-				}	  	
-			});
+			 if($(this).is(':checked')){
+				 //console.log( index + ": " + $(this).val() );
+				 //prev[$(this).val()] = 1;
+				 prev[cont + 27] = 1;
+				 //console.log("cont "+cont);
+			 }			 
+			 cont++;
+		});
 		 
-		 ans = $("#SelectAchSin").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		 //ans = $("#SelectAchSin").val();
+		 $("#SelectAchSin option").each(function(){
+			 if(this.selected) prev[$(this).index() + 42] = 1;
+		 });
+		 /* for(var i in ans){
+			 prev[ans[i] + 42] = 1;
+		 } */
 		 
-		 ans = $("#SelectAchExt").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		 //ans = $("#SelectAchExt").val();
+		 $("#SelectAchExt option").each(function(){
+			 if(this.selected) prev[$(this).index() + 49] = 1;
+		 });
+		 /* for(var i in ans){
+			 prev[ans[i] + 49] = 1;
+		 } */
 		 
-		 ans = $("#SelectAchPar").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		 //ans = $("#SelectAchPar").val();
+		 $("#SelectAchExt option").each(function(){
+			 if(this.selected) prev[$(this).index() + 72] = 1;
+		 });
+		 /* for(var i in ans){
+			 prev[ans[i] + 72] = 1;
+		 } */
 		 
-		 ans = $("#SelectAchCar").val(); 
-		 for(var i in ans){
-			 prev[ans[i]] = 1;
-		 }
+		 //ans = $("#SelectAchCar").val();
+		 $("#SelectAchExt option").each(function(){
+			 if(this.selected) prev[$(this).index() + 95] = 1;
+		 });
+		 /* for(var i in ans){
+			 prev[ans[i] + 95] = 1;
+		 } */
 		 
-		 prev[109] = $("#SelectSex").prop("selectedIndex") -1;
+		 prev[105] = $("#SelectSex").prop("selectedIndex") -1;
 		 
-		 prev[$("#SelectIda").prop("selectedIndex") -1 + 110] = 1;
+		 prev[$("#SelectIda").prop("selectedIndex") -1 + 106] = 1;
 		//console.log(prev);
 		
 		calcEuclid(prev);
@@ -845,7 +854,7 @@ $(document).ready(function() {
 	$("#refresh").click(function(event){
 		event.preventDefault();
 		
-		prev = new Array(115);
+		prev = new Array(112);
 		prev.fill(0);
 		
 		$('input:checkbox').prop('checked',false);
