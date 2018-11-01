@@ -62,6 +62,8 @@ var pesodoencas = [];
 var pesop = [];
 var distancias = [];
 
+var pesos = false
+
 //var knn = new KNN(dataset, predictions);
 //var knn = new KNN(cincodoencas, classes, {k: 1});
 //var dataset = [[0, 0, 0], [2, 2, 2]];
@@ -101,6 +103,7 @@ function calcEuclid(previs){
 	distancias.sort(sortFunction);
 	console.log(distancias);
 }
+
 
 function calcPeso(previs){
 	var pesop = [];
@@ -158,7 +161,8 @@ function sortFunction(a, b) {
 
 function resultado_peso(resul){
 	
-	for(var i=0;i<resul.lenght;i--){
+	pesos = true
+	for(var i=0;i<resul.lenght;i++){
 				
 //		$("knn"+resul[i][2]).show();
 		console.log("for" + resul[i][0] + " - " +resul[i][1])
@@ -173,9 +177,11 @@ function resultado_peso(resul){
 	
 	for (var j=0; j<resul.length;j++){
 		id = resul[j][1];
-		
-		document.getElementById('perc-knn'+ ( id+1) ).innerHTML = resul[j][0].toFixed(2) + "%";
+		console.log("id= "+id)
 		console.log('perc-knn'+ ( id+1) + " - " +resul[j][0].toFixed(2) + "%")
+		document.getElementById('perc-knn'+ ( id+1) ).innerHTML = resul[j][0].toFixed(2) + "%";
+		$('#perc-knn'+ ( id+1)).val(resul[j][0].toFixed(2))
+		
 		
 		console.log("resul")
 		console.log(resul[j][0] + " - " +resul[j][1])
@@ -189,6 +195,8 @@ function resultado_peso(resul){
 			$("#knn"+ ( id+1) ).click();
 			$("#knn"+ ( id+1)   ).show();
 			
+		}else{
+			$("#knn"+ ( id+1)   ).hide();
 		}
 	}
 	
