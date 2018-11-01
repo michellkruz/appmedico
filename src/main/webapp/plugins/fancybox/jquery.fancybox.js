@@ -1913,7 +1913,7 @@
 						title.width( title.width() );
 					}
 
-					title.wrapInner('<span class="child"></span>');
+					title.wrapInner('<span id="titlegalery" class="child"></span>');
 
 					//Increase bottom margin so this title will also fit into viewport
 					F.current.margin[2] += Math.abs( getScalar(title.css('margin-bottom')) );
