@@ -8,7 +8,7 @@
 <div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="#">Referências</a></li>
+			<li><a href="#">Referências</a></li>  <!-- Link para as referencias  -->
 			<li><a href="" id="refresh">Refresh</a></li>
 			
 			<li><a href="" id="showDoencas">Mostrar Todas Doenças</a></li>
@@ -75,6 +75,7 @@
 							<option></option>
 							<option>Partes Moles</option>
 							<option>Vidro Fosco</option>
+							<option>Partes Moles/Vidro Fosco</option>
 						</select>
 					</div>
 				</div>
@@ -924,6 +925,9 @@
 </div>
 
 <script type="text/javascript">
+var prev = new Array(112);
+prev.fill(0);
+console.log(prev);
 // Run Select2 on element
 function Select2Test(){
 	$("#SelectNod").select2(); //0
@@ -956,8 +960,7 @@ $(document).ready(function() {
 	WinMove();
 	
 	//Criacao do vetor de previsao
-	var prev = new Array(112);
-	prev.fill(0);
+	
 	//console.log(prev);
 /* 	distanciaManhattan();
 	minkowski_distance(3);
@@ -971,13 +974,13 @@ $(document).ready(function() {
 		prev[3] = $("#SelectAte").prop("selectedIndex") -1; 
 		prev[4] = $("#SelectTam").prop("selectedIndex") -1; 
 		prev[5] = $("#SelectSim").prop("selectedIndex") -1; 
-		//console.log(prev);
+		console.log(prev);
 		
-		calcEuclid(prev.slice(0,6));
-		calcPeso(prev.slice(0,6));
-		distanciaManhattan(prev.slice(0,6));
-		minkowski_distance(prev.slice(0,6), 3);
-		cosine_similarity(prev.slice(0,6));
+		//calcEuclid(prev);
+		calcPeso(prev);
+		/* distanciaManhattan(prev);
+		minkowski_distance(prev, 3);
+		cosine_similarity(prev); */
 		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	});
@@ -986,13 +989,13 @@ $(document).ready(function() {
 		prev[6] = $("#SelectCalci").prop("selectedIndex") -1; 
 		prev[7] = $("#SelectArvBrot").prop("selectedIndex") -1; 
 		//prev[8] = $("#SelectCavit").prop("selectedIndex") -1; 
-		//console.log(prev);
+		console.log(prev);
 		
-		calcEuclid(prev.slice(0,9));
-		calcPeso(prev.slice(0,9));
-		distanciaManhattan(prev.slice(0,9));
-		minkowski_distance(prev.slice(0,9), 3);
-		cosine_similarity(prev.slice(0,9));
+		//calcEuclid(prev);
+		calcPeso(prev);
+		/* distanciaManhattan(prev);
+		minkowski_distance(prev, 3);
+		cosine_similarity(prev); */
 		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	}); 
@@ -1068,13 +1071,13 @@ $(document).ready(function() {
 		 prev[105] = $("#SelectSex").prop("selectedIndex") -1;
 		 
 		 prev[$("#SelectIda").prop("selectedIndex") -1 + 106] = 1;
-		//console.log(prev);
+		console.log(prev);
 		
-		calcEuclid(prev);
+		//calcEuclid(prev);
 		calcPeso(prev);
-		distanciaManhattan(prev);
+		/* distanciaManhattan(prev);
 		minkowski_distance(prev, 3);
-		cosine_similarity(prev);
+		cosine_similarity(prev); */
 		
 		$(this).closest("div.box").find("a.collapse-link").trigger("click");
 	}); 
