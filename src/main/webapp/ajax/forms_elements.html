@@ -1195,23 +1195,23 @@ $(document).ready(function() {
 $('#referencias').click(function(){
 	
 	
-// 	var client = new XMLHttpRequest();
-// 	client.open('GET', '/referencias.txt');
-// 	client.onreadystatechange = function() {
-// 	  alert(client.responseText);
-// 	}
-// 	client.send();
+//função que ativa o popup das referencias
 
+	//função que abre o txt com as referencias
+	
 	readTextFile("ajax/referencias.txt"); // sem os pontos de paragrafo
 // 	readTextFile("ajax/referencias2.txt"); // com os pontos de paragrafo
 	var header = '<h3><p class="text-center"><strong>Referências</strong><p></h3>';
 	var footer = '';
+	
+	//função do devoops que recebe cabeça~lho, conteudo e rodapé e insere em um popup e abre na tela
 	OpenModalBox(header,ref,footer);
 	
 	
 });
 var ref;
 
+//função que abre um arquivo txt
 function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
