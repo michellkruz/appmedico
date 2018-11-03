@@ -925,9 +925,6 @@
 </div>
 
 <script type="text/javascript">
-var prev = new Array(112);
-prev.fill(0);
-console.log(prev);
 // Run Select2 on element
 function Select2Test(){
 	$("#SelectNod").select2(); //0
@@ -960,7 +957,8 @@ $(document).ready(function() {
 	WinMove();
 	
 	//Criacao do vetor de previsao
-	
+	var prev = new Array(112);
+	prev.fill(0);	
 	//console.log(prev);
 /* 	distanciaManhattan();
 	minkowski_distance(3);
@@ -974,7 +972,7 @@ $(document).ready(function() {
 		prev[3] = $("#SelectAte").prop("selectedIndex") -1; 
 		prev[4] = $("#SelectTam").prop("selectedIndex") -1; 
 		prev[5] = $("#SelectSim").prop("selectedIndex") -1; 
-		console.log(prev);
+		//console.log(prev);
 		
 		//calcEuclid(prev);
 		calcPeso(prev);
@@ -989,7 +987,7 @@ $(document).ready(function() {
 		prev[6] = $("#SelectCalci").prop("selectedIndex") -1; 
 		prev[7] = $("#SelectArvBrot").prop("selectedIndex") -1; 
 		//prev[8] = $("#SelectCavit").prop("selectedIndex") -1; 
-		console.log(prev);
+		//console.log(prev);
 		
 		//calcEuclid(prev);
 		calcPeso(prev);
@@ -1053,7 +1051,7 @@ $(document).ready(function() {
 		 } */
 		 
 		 //ans = $("#SelectAchPar").val();
-		 $("#SelectAchExt option").each(function(){
+		 $("#SelectAchPar option").each(function(){
 			 if(this.selected) prev[$(this).index() + 72] = 1;
 		 });
 		 /* for(var i in ans){
@@ -1061,7 +1059,7 @@ $(document).ready(function() {
 		 } */
 		 
 		 //ans = $("#SelectAchCar").val();
-		 $("#SelectAchExt option").each(function(){
+		 $("#SelectAchCar option").each(function(){
 			 if(this.selected) prev[$(this).index() + 95] = 1;
 		 });
 		 /* for(var i in ans){
