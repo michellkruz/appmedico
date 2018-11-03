@@ -8,7 +8,7 @@
 <div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="#">Referências</a></li>  <!-- Link para as referencias  -->
+			<li><a href="#" id="referencias">Referências</a></li>  <!-- Link para as referencias  -->
 			<li><a href="" id="refresh">Refresh</a></li>
 			
 			<li><a href="" id="showDoencas">Mostrar Todas Doenças</a></li>
@@ -1189,6 +1189,49 @@ $(document).ready(function() {
 	// Add Drag-n-Drop to boxes
 	WinMove();
 });
+
+
+
+$('#referencias').click(function(){
+	
+	
+// 	var client = new XMLHttpRequest();
+// 	client.open('GET', '/referencias.txt');
+// 	client.onreadystatechange = function() {
+// 	  alert(client.responseText);
+// 	}
+// 	client.send();
+
+	readTextFile("ajax/referencias.txt");
+	var header = '<h3><p class="text-center"><strong>Referências</strong><p></h3>';
+	var footer = '';
+	OpenModalBox(header,ref,footer);
+	
+	
+});
+var ref;
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+//                 alert(allText);
+					
+            }
+        }
+       
+    }
+    rawFile.send(null);
+    ref=rawFile.responseText
+    
+}
 
 </script>
 
