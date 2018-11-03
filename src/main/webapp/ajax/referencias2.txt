@@ -1,0 +1,37 @@
+<div id='referencias-content'>
+	<ul style="margin: 0px 10px 0px -20px;">
+	<li><p class="text-justify">BAGESTEIRO, L. <b>Classificação de padrões radiológicos por blocos em imagens  não segmentadas de tomografia computadorizada.</b> 2015. 84f. Dissertação (Mestre  em informática) – Universidade Federal do Paraná - Programa de Pós-Graduação em Informática, Curitiba, 2015.</p></li>
+	 
+	<li><p class="text-justify">BROWN, M. S.; et al. Computer-aided Lung Nodule Detection in CT. <b>Academic Radiology.</b></li> 2005;12(6):681-686.</p>
+
+	<li><p class="text-justify">CARVALHO, A.C.P. História da Tomografia Computadorizada. <b>Rev Imagem</b>, 2007;29(2):61-66.</p></li>
+
+	<li><p class="text-justify">HOROS®. Horos Project. Disponível em:<a href="https://horosproject.org"> < https://horosproject.org> </a>. Acesso em: 19 out 2018.</p> </li>
+
+	<li><p class="text-justify">MEDGRUPO ®. Disponível em:<a href="http://site.medgrupo.com.br/#/home"> < http://site.medgrupo.com.br/#/home > </a>. Acesso em 15 out 2018.</p> </li>
+	<li><p class="text-justify">PEBMED. Disponível em:<a href="https://pebmed.com.br/category/whitebook/"> < https://pebmed.com.br/category/whitebook/> </a>. Acesso em: 10 out 2018.</p> </li>
+	<li><p class="text-justify">SANTOS, K.C.P.; COSTA, C.; OLIVEIRA, J.X. Disponível em: <a href="http://srvd.grupoa.com.br/uploads/imagensExtra/legado/F/FREITAS_Claudio_F/Imaginologia/Lib/Cap_01.pdf"> < http://srvd.grupoa.com.br/uploads/imagensExtra/legado/F/FREITAS_Claudio_F/Imaginologia/Lib/Cap_01.pdf > </a>. Acesso em 15 out 2018</p> </li>
+	<li><p class="text-justify">SILVA, C.I.S; MARCHIORI, E.; JÚNIOR, A.S.S; MULLER, N.L. Consenso brasileiro ilustrado sobre a terminologia dos descritores e padrões fundamentais da TC de tórax. <b>J Bras Pneumol.</b> 2010;36(1):99-123.</p> </li>
+	<li><p class="text-justify">SILVA, C.I.S; MULLER, N.L. <b>Tórax - Colégio Brasileiro de Radiologia e Diagnóstico por Imagem.</b> Rio de Janeiro. Elsevier; 2011.</p> </li>
+	<li><p class="text-justify">SILVA, C.I.S; JASINOWODOLINSKI, D.; FILHO, M.T.; MULLER, N.L. <b>Tomografia Computadorizada de alta resolução do tórax Jorge Kavakama.</b>Tomografia Computadorizada de alta resolução do tórax Jorge Kavakama. Rio de Janeiro. Revinter; 2008.</p> </li>
+	<li><p class="text-justify">WERLANG, H.Z.; BERGOLI, P.M.; MADALOSSO, B.H. <b>Manual do Residente de Radiologia.</b> Rio de Janeiro. Guanabara Koogan; 2009.</p> </li>
+
+	</ul>
+</div>
+<p class="text-justify"> </p> 
+<b></b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1202,7 +1202,8 @@ $('#referencias').click(function(){
 // 	}
 // 	client.send();
 
-	readTextFile("ajax/referencias.txt");
+	readTextFile("ajax/referencias.txt"); // sem os pontos de paragrafo
+// 	readTextFile("ajax/referencias2.txt"); // com os pontos de paragrafo
 	var header = '<h3><p class="text-center"><strong>Referências</strong><p></h3>';
 	var footer = '';
 	OpenModalBox(header,ref,footer);
