@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
 		<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 		<link href="plugins/fancybox/jquery.fancybox.css" rel="stylesheet">
 		<link href="plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
@@ -44,13 +44,47 @@
 	<div class="container-fluid expanded-panel">
 		<div class="row">
 			<div id="logo" class="col-xs-12 col-sm-2">
-				<a href="index.html">CTHelp</a>
+				<a href="index.html" id="cthelp">CTHelp</a>
+				<img src="img/logo.png">
 			</div>
 			<div id="top-panel" class="col-xs-12 col-sm-10">
 				<div class="row">
 					<div class="col-xs-8 col-sm-4">
 						<a href="#" class="show-sidebar">
 						</a>
+					</div>
+					<div class="col-xs-4 col-sm-8 top-panel-right">
+						<a href="#">
+							<i id="refresh" title="Limpar campos" class="fa fa-refresh"></i>
+						</a>
+						<a href="#">
+							<i id="referencias" title="Referências" class="fa fa-book"></i>
+						</a>
+						<div id="divDropMenu" class="dropdown">
+						    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+						    	<i class="fa fa-bars"></i>
+						    </a>
+						    <ul id="ulDropMenu" class="dropdown-menu">
+						      	<li id="sobreApp">
+									<a href="#">
+										<i class="fa fa-flag"></i>
+										<span>Sobre</span>
+									</a>
+								</li>
+								<li id="temaEscuro">
+									<a href="#" class="" onc>
+										<i class="fa fa-moon-o"></i>
+										<span>Tema escuro</span>
+									</a>
+								</li>
+								<li id="temaClaro">
+									<a href="#" class="">
+										<i class="fa fa-sun-o"></i>
+										<span>Tema claro</span>
+									</a>
+								</li>
+						    </ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -83,7 +117,7 @@
 <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="js/devoops.js"></script>
-
+<script src="js/effects.js"></script>
 <script src="js/euclidean.js"></script>
 <script src="js/PadraoNodular.js"></script>
 </body>

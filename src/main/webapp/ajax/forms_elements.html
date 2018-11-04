@@ -8,9 +8,7 @@
 <div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="#" id="referencias">Referências</a></li>  <!-- Link para as referencias  -->
-			<li><a href="" id="refresh">Refresh</a></li>
-			
+			<li><a href="" id="">Padrão Nodular</a></li>
 			<li><a href="" id="showDoencas">Mostrar Todas Doenças</a></li>
 		</ol>
 	</div>
@@ -20,8 +18,8 @@
 	<div class="col-xs-12 col-sm-6">
 		<div class="box">
 			<div class="box-header">
-				<div class="box-name" style = "background-color: #1f97ef4d;">
-					<i class="fa fa-bar-chart-o"></i>
+				<div id="infBasic" class="box-name">
+					<i class="fa fa-list"></i>
 					<span>Informações Básicas</span>
 				</div>
 				<div class="box-icons">
@@ -107,8 +105,8 @@
 
 		<div class="box">
 			<div class="box-header">
-				<div class="box-name" style = "background-color: #8ea9db;">
-					<i class="fa fa-bar-chart-o"></i>
+				<div id="infCarac1" class="box-name">
+					<i class="fa fa-list"></i>
 					<span>Características I</span>
 				</div>
 				<div class="box-icons">
@@ -160,8 +158,8 @@
 
 		<div class="box">
 			<div class="box-header">
-				<div class="box-name" style = "background-color:#a9d08e">
-					<i class="fa fa-bar-chart-o"></i>
+				<div id="infCarac2" class="box-name">
+					<i class="fa fa-list"></i>
 					<span>Características II</span>
 				</div>
 				<div class="box-icons">
@@ -436,8 +434,8 @@
 	<div class="col-xs-12 col-sm-6">
 		<div class="box">
 			<div class="box-header">
-				<div class="box-name" style = "background-color: #aeaaaa">
-					<i class="fa fa-circle"></i>
+				<div id="infSaida" class="box-name">
+					<i class="fa fa-clipboard"></i>
 					<span>Saída</span>
 				</div>
 				<div class="box-icons">
@@ -1207,6 +1205,22 @@ $('#referencias').click(function(){
 	//função do devoops que recebe cabeça~lho, conteudo e rodapé e insere em um popup e abre na tela
 	OpenModalBox(header,ref,footer);
 	
+	
+});
+
+$('#sobreApp').click(function(){
+		
+	var header2 = '<h3><p class="text-center"><strong>Sobre o projeto</strong><p></h3>';
+	var ref2 = '<div align="center"><p><h3>Idealizador</h3></p>';
+		ref2 += '<p><h4>André Maciel</h4></p>'
+		ref2 += '<p><h3>Desenvolvedores</h3></p>'
+		ref2 += '<p><h4>Anderson Furtado - anderson.fn88@gmail.com</h4></p>';
+		ref2 += '<p><h4>Marissa Brasil - marissa.brasil@gmail.com</h4></p>';
+		ref2 += '<p><h4>Michel Cruz - michellkruz@gmail.com</h4></p></div>';
+	var footer2 = '';
+	
+	//função do devoops que recebe cabeça~lho, conteudo e rodapé e insere em um popup e abre na tela
+	OpenModalBox(header2,ref2,footer2);
 	
 });
 var ref;

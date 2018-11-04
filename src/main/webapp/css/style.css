@@ -1,5 +1,59 @@
 body {
-  color: #525252;
+  color: #999;
+}
+#top-panel i {
+  color: #c6c6c6;
+}
+#tabs a {
+  color: #9e9e9e;
+}
+.ui-tabs-panel {
+  color: #9e9e9e;
+}
+#infBasic {
+  background-color: #1f97ef4d;
+}
+#infCarac1 {
+  background-color: #8ea9db;
+}
+#infCarac2 {
+  background-color:#a9d08e;
+}
+#infSaida {
+  background-color: #b3a1b9;
+} 
+#refresh {
+  float: right;
+  margin-top: 19px;
+  margin-right: 60px;
+}
+#referencias {
+  float: right;
+  margin-top: 19px;
+  margin-right: 50px;
+}
+#ulDropMenu {
+  position: relative;
+  top: 50px;
+  margin-right: -15px;
+  color: #fff;
+  opacity: 0.8;
+  background-color: #000;
+}
+#ulDropMenu span {
+  color: #fff;
+}
+##ulDropMenu i {
+  color: #fff !important;
+}
+#divDropMenu {
+  float: right;
+  margin-right: -132px;
+}
+
+/**************************** AJUSTES ACIMA*******************************/
+body {
+  color: #9e9e9e; /*Claro #525252;*/
   background: #6AA6D6 url(../img/devoops_pattern_b10.png) 0 0 repeat;
 }
 .body-expanded, .modal-open {
@@ -25,14 +79,23 @@ h1, .h1, h2, .h2, h3, .h3 {
   display: block;
   font-size: 20px;
   line-height: 50px;
-  background: url(../img/logo.png) right 42px no-repeat;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  text-decoration: none;
 }
-#logo a:hover {
+/*#logo a:hover {
   background-position: right 25px;
+  text-decoration: none;
+}*/
+#logo img{
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s; 
+  /* Safari */
+  transition: width 1s, height 1s, transform 1s;
+}
+#logo img:hover {
+  -webkit-transform: rotate(180deg); /* Safari */
+  transform: rotate(180deg);
   text-decoration: none;
 }
 .navbar {
@@ -76,7 +139,7 @@ a.show-sidebar:hover {
 #content {
   position: relative;
   z-index: 10;
-  background: #ebebeb;
+  background: #202020; /*Claro #ebebeb;*/
   box-shadow: 0 0 6px #131313;
   padding-bottom: 3000px !important;
   margin-bottom: -2980px !important;
@@ -169,7 +232,7 @@ a.show-sidebar:hover {
 #top-panel {
   line-height: 50px;
   height: 50px;
-  background: #ebebeb;
+  background: #0c0c0c; /*Claro #ebebeb */
 }
 #main {
   margin-top: 50px;
@@ -316,8 +379,8 @@ a.show-sidebar:hover {
   display: block;
   z-index: 1999;
   position: relative;
-  border: 1px solid #f8f8f8;
-  box-shadow: 0 0 4px #D8D8D8;
+  border: 1px solid #000; /*Claro #f8f8f8;*/
+  box-shadow: 0 0 4px #3b3b3b; /*Claro #D8D8D8;*/
   background: transparent;
   margin-bottom: 20px;
   -webkit-border-radius: 3px;
@@ -377,7 +440,7 @@ a.show-sidebar:hover {
   -moz-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
   padding: 15px;
-  background: #FCFCFC;
+  background: #111; /*Claro #FCFCFC;*/
 }
 .box-content.dropbox, .box-content.sortablebox {
   overflow: hidden;
@@ -599,8 +662,8 @@ ul.DTTT_dropdown.dropdown-menu > li:hover > a {
 #breadcrumb {
   padding: 0;
   line-height: 40px;
-  background: #525252;
-  background: #5a8db6 url(../img/devoops_pattern_b10.png) 0 0 repeat;
+  background: #525252; 
+  background: #2d2d2d url(../img/devoops_pattern_b10.png) 0 0 repeat; /* Claro #5a8db6*/
   margin-bottom: 20px;
 }
 .breadcrumb {

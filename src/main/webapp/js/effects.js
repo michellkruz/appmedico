@@ -1,0 +1,33 @@
+$( "#temaEscuro" ).hide();
+$( "#temaClaro" ).click(function() {
+  $( "#temaEscuro" ).show();
+  $( "#temaClaro" ).hide();
+  $( "body" ).css( "color", "#525252" );
+  $( "#content" ).css( "background", "#ebebeb" );
+  $( "#top-panel" ).css( "background", "#ebebeb" );
+  $( ".box" ).css( "border", "1px solid #f8f8f8" );
+  $( ".box" ).css( "box-shadow", "0 0 4px #D8D8D8" );
+  $( ".box-content" ).css( "background", "#FCFCFC" );
+  $( "#breadcrumb" ).css( "background", "#5165d4 url(../img/devoops_pattern_b10.png) 0 0 repeat" );
+  $( "#top-panel" ).css( "color", "#484848" );
+  $( "#ulDropMenu" ).css( "background-color", "#e0e0e0" );
+  $( "#ulDropMenu span" ).css( "color", "#2f2f2f !important" );
+  $( "#ulDropMenu i" ).css( "color", "#2f2f2f !important" );
+  $( "#top-panel i" ).css( "color", "#2f2f2f !important" );
+});
+$( "#temaEscuro" ).click(function() {
+  $( "#temaClaro" ).show();
+  $( "#temaEscuro" ).hide();
+  $( "body" ).css( "color", "#9e9e9e" );
+  $( "#content" ).css( "background", "#202020" );
+  $( "#top-panel" ).css( "background", "#0c0c0c" );
+  $( ".box" ).css( "border", "1px solid #000" );
+  $( ".box" ).css( "box-shadow", "0 0 4px #3b3b3b" );
+  $( ".box-content" ).css( "background", "#111" );
+  $( "#breadcrumb" ).css( "background", "#2d2d2d url(../img/devoops_pattern_b10.png) 0 0 repeat" );
+  $( "#top-panel" ).css( "color", "#484848" );
+  $( "#ulDropMenu" ).css( "background-color", "#000" );
+  $( "#ulDropMenu span" ).css( "color", "#fff !important" );
+  $( "#ulDropMenu i" ).css( "color", "#2f2f2f !important" );
+  $( "#top-panel i" ).css( "color", "#c6c6c6 !important" );
+});
