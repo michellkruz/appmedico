@@ -3,8 +3,8 @@ var pesodoencas = [];
 function calcPesoGeral(doencas){
 	for(var j = 0; j < doencas.length; j++){
 		pesodoencas[j] = 13;
-		for(var i = 8; i < pesosoma.length - 7; i++){
-			if(doencas[j][i] === 1) pesodoencas[j] += pesosoma[i];		
+		for(var i = 8; i < psoma_nodular.length - 7; i++){
+			if(doencas[j][i] === 1) pesodoencas[j] += psoma_nodular[i];		
 		}
 		
 		console.log("doenca "+ j, pesodoencas[j]);
@@ -24,24 +24,24 @@ function calcPeso(previs, doencas){
 		for(var i = 0; i < previs.length; i++){
 			if(i <= 7 || i == 105){ //caracteristicas e sexo
 				if(previs[i] === doencas[j][i]){
-					pesop[j][0] += pesosoma[i];
+					pesop[j][0] += psoma_nodular[i];
 				}else{
-					pesop[j][0] += pesosub[i];
+					pesop[j][0] += psub_nodular[i];
 				}
 			}else if(i > 7 && i <= 104){ //local, assoc, achados
 				if(previs[i] === 1){
-					pesop[j][0] += pesosoma[i];
+					pesop[j][0] += psoma_nodular[i];
 				}else{
-					pesop[j][0] += pesosub[i];
+					pesop[j][0] += psub_nodular[i];
 				}
 			}else{  //idade
 				if(previs[i] === doencas[j][i]){
-					pesop[j][0] += pesosoma[i];
+					pesop[j][0] += psoma_nodular[i];
 //					break;
 //					console.log("break");
 					i = previs.length;
 				}else{
-					pesop[j][0] += pesosub[i];
+					pesop[j][0] += psub_nodular[i];
 				}
 			}
 		}
